@@ -37,6 +37,37 @@ app.listen(PORT, function(){
 node server.js
 ```
 
-## Congrats! You've got a functioning Express server.
+#### Congrats! You've got a functioning Express server.
 
 
+## Step Two: Add a sample route
+
+### 1. Create a simple JSON response
+```javascript
+app.get('/config', function(req,res){
+    res.json({
+        appName: "reactExpress"
+    })
+  })
+```
+
+### 2. Create a Script to Run the App
+```javascript
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+```
+
+Now, instead of running ```node sever.js```I can type ```yarn start```.
+
+Why does this help? 
+
+```sh
+yarn add nodemon
+```
+
+Now, we can change the script to: 
+```javascript
+"start": "nodemon server.js"
+```

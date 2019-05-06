@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A starter app built with express and react",
   "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
   "repository": "https://github.com/jonathanjwatson/reactExpress.git",
   "author": "jwats287 <jwats287@users.noreply.github.com>",
   "license": "MIT",
