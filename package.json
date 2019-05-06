@@ -1,0 +1,12 @@
+{
+  "name": "reactExpress",
+  "version": "1.0.0",
+  "description": "A starter app built with express and react",
+  "main": "server.js",
+  "repository": "https://github.com/jonathanjwatson/reactExpress.git",
+  "author": "jwats287 <jwats287@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
