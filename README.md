@@ -71,3 +71,45 @@ Now, we can change the script to:
 ```javascript
 "start": "nodemon server.js"
 ```
+
+## Step Three: Add React
+
+### 1. Install Create React App
+```sh
+npm install create-react-app -g
+```
+This installs create-react-app globally as a command line tool. 
+
+
+### 2. Create your client directory. 
+```sh
+create-react-app client
+```
+
+### 3. Start up your client
+```sh
+cd client
+```
+```sh
+yarn start
+```
+
+This seems annoying. How do we start our server and our React app together?
+
+### 4. Setup a new script
+```javascript
+"start:local": "concurrently \"nodemon server.js\" \"cd ./client && yarn start\" "
+```
+What is concurrently? [Read more...](https://www.npmjs.com/package/concurrently)
+
+We need to install concurrently. How would we do that?
+
+### 5. Run our new command
+```sh
+yarn start:local
+```
+Now, [localhost:3001/config](http://localhost:3001/config) shows our previously generated express route. While [localhost:3000](http://localhost:3000/) returns our React app. 
+
+### 6 Housekeeping
+
+Add a .gitignore file and ignore node_modules files. These will be built in pipeline. 
