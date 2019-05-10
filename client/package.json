@@ -14,8 +14,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src./*.{js,jsx,mjs}",
+      "src/**.*.{js,jsx,mjs}"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
